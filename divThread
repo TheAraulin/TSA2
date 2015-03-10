@@ -1,5 +1,6 @@
-package tsatry1;
+package tsatry2;
 
+import java.math.BigDecimal;
 import java.util.concurrent.Callable;
 
 class divideThread implements Callable<BigDecimal>{
