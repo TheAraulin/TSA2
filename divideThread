@@ -1,0 +1,20 @@
+package tsatry1;
+
+import java.util.concurrent.Callable;
+
+class divideThread implements Callable<BigDecimal>{
+	BigDecimal bdDenom = new BigDecimal(0);
+	BigDecimal bdNum = new BigDecimal(0);
+
+
+public divideThread(BigDecimal num, BigDecimal denom){
+	bdDenom = denom;
+	bdNum = num;
+}
+
+	@Override
+	public BigDecimal call() throws Exception{
+		bdNum = bdNum.divide(bdDenom, 2000, BigDecimal.ROUND_HALF_EVEN);
+		return bdNum;
+	}
+}
