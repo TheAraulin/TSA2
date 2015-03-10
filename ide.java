@@ -24,27 +24,7 @@ public class ide
 		//System.out.println("bytes= "+Arrays.toString(bytes));
 		//System.out.println("text again= "+new String(bytes, UTF_8));
                 BigDecimal[] number = new BigDecimal[n];
-		for(int i=0; i<n; i++){
-			bdN = bdN.valueOf(n);
-			byteA = bytes[i];
-			bdByte = bdByte.valueOf(byteA);
-			bdNum = bdByte.add(b);
-			bdNum = bdNum.pow(n); 
-			bdNum = a.multiply(bdNum);
-			ab = a.multiply(b);
-			bdNum = bdNum.pow(ab.intValue());
-			bdDenom = b.multiply(bdN.subtract(a.add(bdOne)));
-                        System.out.println("BdDenom "+bdDenom.intValue()+" A: "+a.intValue()+"B: "+b.intValue());
-                        if(bdDenom.intValue() < 0){
-                            bdDenom = bdDenom.multiply(BigDecimal.valueOf(-1));
-                        }
-                        System.out.println("After 0 check: "+bdDenom.intValue());
-			bdDenom = bdDenom.pow(bdDenom.intValue()/a.intValue());
-			//System.out.println("Denom: " + bdDenom);
-			bdNum = bdNum.divide(bdDenom, 2000, BigDecimal.ROUND_HALF_EVEN);
-			//System.out.println("Number: " + bdNum);
-                        number[i] = bdNum;
-		}
+		
                 //System.out.println(Arrays.toString(number));
 		return number;
 	}
