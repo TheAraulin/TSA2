@@ -1,0 +1,31 @@
+package tsatry1;
+
+import java.util.concurrent.Callable;
+
+class numThread implements Callable<BigDecimal>{
+    
+    BigDecimal bdByte = new BigDecimal(0);
+    BigDecimal bdN = new BigDecimal(0);
+    BigDecimal bdNum = BigDecimal(0);
+    BigDecimal a = BigDecimal(0)
+    int n;
+    int AB;
+    
+    public numThread(Byte input, int length, int intA, int intB, int ab){
+      bdByte = bdByte.valueOf(input);
+      bdN = bdN.valueOf(length);
+      n = length;
+      AB = ab;
+      a = a.valueOf(intA)
+    }
+    
+    @Override
+    public BigDecimal call() throws Exception{
+      	bdNum = bdByte.add(a);
+      	bdNum = bdNum.pow(n);
+      	bdNum = a.multiply(bdNum);
+      	bdNum = bdNum.pow(AB);
+      	return bdNum;
+      return;
+    }
+}
