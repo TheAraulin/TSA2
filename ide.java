@@ -20,12 +20,8 @@ public class ide
                 String text = input;
 		int n = text.length();
 		byte[] bytes = text.getBytes(UTF_8);
-		//System.out.println(n);
-		//System.out.println("bytes= "+Arrays.toString(bytes));
-		//System.out.println("text again= "+new String(bytes, UTF_8));
                 BigDecimal[] number = new BigDecimal[n];
-		
-                //System.out.println(Arrays.toString(number));
+	
 		return number;
 	}
 }
