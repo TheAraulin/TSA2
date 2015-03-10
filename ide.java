@@ -9,7 +9,7 @@ public class ide
 {
 	private static final Charset UTF_8 = Charset.forName("UTF-8");
 	
-	ExecutorService executor = Executors.newCachedThreadPool();
+	ExecutorService executor = Executors.newCachedThreadPool(4);
 	
 	public static BigDecimal[] encrypt(String input, BigDecimal a, BigDecimal b) throws java.lang.Exception
 	{
