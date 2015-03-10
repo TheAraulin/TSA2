@@ -1,13 +1,14 @@
-package tsatry1;
+package tsatry2;
 
 import java.util.concurrent.Callable;
+import java.math.BigDecimal;
 
 class numThread implements Callable<BigDecimal>{
     
     BigDecimal bdByte = new BigDecimal(0);
     BigDecimal bdN = new BigDecimal(0);
-    BigDecimal bdNum = BigDecimal(0);
-    BigDecimal a = BigDecimal(0)
+    BigDecimal bdNum = new BigDecimal(0);
+    BigDecimal a = new BigDecimal(0);
     int n;
     int AB;
     
@@ -16,7 +17,7 @@ class numThread implements Callable<BigDecimal>{
       bdN = bdN.valueOf(length);
       n = length;
       AB = ab;
-      a = a.valueOf(intA)
+      a = a.valueOf(intA);
     }
     
     @Override
@@ -26,6 +27,5 @@ class numThread implements Callable<BigDecimal>{
       	bdNum = a.multiply(bdNum);
       	bdNum = bdNum.pow(AB);
       	return bdNum;
-      return;
     }
 }
