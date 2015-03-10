@@ -8,20 +8,17 @@ import java.nio.charset.Charset;
 public class ide
 {
 	private static final Charset UTF_8 = Charset.forName("UTF-8");
+	
+	ExecutorService executor = Executors.newCachedThreadPool();
+	
 	public static BigDecimal[] encrypt(String input, BigDecimal a, BigDecimal b) throws java.lang.Exception
 	{
 		byte byteA = 0;
-		BigDecimal bdByte = new BigDecimal(0);
-		BigDecimal bdNum = new BigDecimal(0);
-		BigDecimal bdN = new BigDecimal(0);
-		BigDecimal ab = new BigDecimal(0);
-		BigDecimal bdDenom = new BigDecimal(0);
-		BigDecimal bdOne = new BigDecimal("1.0");
-                String text = input;
-		int n = text.length();
-		byte[] bytes = text.getBytes(UTF_8);
+		int AB = a*b;
                 BigDecimal[] number = new BigDecimal[n];
 	
+		
+		
 		return number;
 	}
 }
