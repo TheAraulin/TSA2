@@ -1,4 +1,4 @@
-package tsatry2;
+package tsatry2.encrypt;
 
 import java.math.BigDecimal;
 import java.util.concurrent.Callable;
@@ -15,7 +15,7 @@ public divideThread(BigDecimal num, BigDecimal denom){
 
 	@Override
 	public BigDecimal call() throws Exception{
-		bdNum = bdNum.divide(bdDenom, 2000, BigDecimal.ROUND_HALF_EVEN);
+		bdNum = bdNum.divide(bdDenom, 500, BigDecimal.ROUND_HALF_EVEN);
 		return bdNum;
 	}
 }
