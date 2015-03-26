@@ -1,4 +1,4 @@
-package tsatry2;
+package tsatry2.encrypt;
 
 import java.util.concurrent.Callable;
 import java.math.BigDecimal;
@@ -8,23 +8,25 @@ class numThread implements Callable<BigDecimal>{
     BigDecimal bdByte = new BigDecimal(0);
     BigDecimal bdN = new BigDecimal(0);
     BigDecimal bdNum = new BigDecimal(0);
-    BigDecimal a = new BigDecimal(0);
+    BigDecimal bdA = new BigDecimal(0);
+    BigDecimal bdB = new BigDecimal(0);
     int n;
     int AB;
     
-    public numThread(Byte input, int length, int intA, int intB, int ab){
-      bdByte = bdByte.valueOf(input);
-      bdN = bdN.valueOf(length);
+    public numThread(Byte input, int length, BigDecimal A, BigDecimal B, int ab){
+      bdByte = BigDecimal.valueOf(input);
+      bdN = BigDecimal.valueOf(length);
+      bdA = A;
+      bdB = B;
       n = length;
       AB = ab;
-      a = a.valueOf(intA);
     }
     
     @Override
     public BigDecimal call() throws Exception{
-      	bdNum = bdByte.add(a);
+      	bdNum = bdByte.add(bdB);
       	bdNum = bdNum.pow(n);
-      	bdNum = a.multiply(bdNum);
+      	bdNum = bdA.multiply(bdNum);
       	bdNum = bdNum.pow(AB);
       	return bdNum;
     }
