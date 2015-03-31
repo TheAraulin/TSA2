@@ -1,0 +1,25 @@
+package tsatry2.decrypt;
+
+import java.math.BigDecimal;
+import java.util.concurrent.Callable;
+
+class multiThread implements Callable<BigDecimal>{
+	BigDecimal bdDenom = new BigDecimal(0);
+	String bdNum = "";
+
+
+public multiThread(String input, BigDecimal denom){
+	bdDenom = denom;//setting args to local vars
+	bdNum = input;
+}
+
+	@Override
+	public BigDecimal call() throws Exception{
+		
+//                System.out.println(input);
+                BigDecimal numor = new BigDecimal(bdNum);//create bd with string for method
+                numor = numor.multiply(bdDenom);//multiply input by denom
+                
+		return numor;
+	}
+}
